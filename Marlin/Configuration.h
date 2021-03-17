@@ -647,8 +647,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true //false //rado Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true //false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING false //rado true normal endstop// Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false //true // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1157,15 +1157,15 @@
 
 // The size of the print bed
 #define X_BED_SIZE 330 //rado
-#define Y_BED_SIZE 315
+#define Y_BED_SIZE 314
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -9 //rado
-#define Y_MIN_POS -22
+#define X_MIN_POS -11 //-9 rado
+#define Y_MIN_POS -17 //
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 350
 
 /**
  * Software Endstops
