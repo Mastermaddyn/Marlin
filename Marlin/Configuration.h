@@ -70,7 +70,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "rado_fresh" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Martinus" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "X5S Rado" //rado
+#define CUSTOM_MACHINE_NAME "Stoelly" //rado
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -492,9 +492,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp   13.0380 //5.95 Dice24V BANG_MAX 220
-    #define DEFAULT_Ki   0.9314  //0.50
-    #define DEFAULT_Kd   45.6297 //17.61
+    #define DEFAULT_Kp   15.02 //5.95 Dice24V BANG_MAX 220
+    #define DEFAULT_Ki   1.15  //0.50
+    #define DEFAULT_Kd   48.85 //17.61
   #endif
 #endif // PIDTEMP
 
@@ -533,9 +533,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 242.66
-  #define DEFAULT_bedKi 26.12
-  #define DEFAULT_bedKd 563.52
+  #define DEFAULT_bedKp 186.53
+  #define DEFAULT_bedKi 31.03
+  #define DEFAULT_bedKd 747.48
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -647,8 +647,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true //false //rado Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true //false // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -675,10 +675,10 @@
  */
 #define X_DRIVER_TYPE  TMC2209  //rado
 #define Y_DRIVER_TYPE  TMC2209
-#define Z_DRIVER_TYPE  TMC2208
+#define Z_DRIVER_TYPE  TMC2209
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-#define Z2_DRIVER_TYPE TMC2208
+#define Z2_DRIVER_TYPE TMC2209
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 #define E0_DRIVER_TYPE TMC2209
@@ -736,7 +736,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.2, 80.2, 400, 138.42 } //rado PLA 131.5, PETG 138.42
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 81.07, 81.11, 400, 95.8 } //rado PLA 131.5, PETG 138.42
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -986,7 +986,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 40, -1.00 } //rado
+#define NOZZLE_TO_PROBE_OFFSET { -29, 3, -1.15 } //rado
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
